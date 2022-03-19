@@ -25,7 +25,10 @@
         class="h-96 w-full object-cover"
         src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
       />
-      <div class="relative pt-10 pb-20 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8">
+      <div
+        v-if="post"
+        class="relative pt-10 pb-20 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8"
+      >
         <p class="text-sm font-medium text-indigo-600 mb-2">
           <a href="#" class="hover:underline"> Article </a>
         </p>

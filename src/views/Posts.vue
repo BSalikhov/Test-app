@@ -137,6 +137,7 @@ export default {
   methods: {
     pageChanged(page) {
       this.page = page;
+      this.route.params.query.push;
     },
   },
 };

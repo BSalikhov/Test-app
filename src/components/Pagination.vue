@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full bg-white inline-flex shadow-lg items-center justify-between p-4 border-t border-gray-200 sm:px-6 rounded-b-lg"
+    class="w-full bg-white inline-flex shadow-lg items-center justify-between p-4 sm:px-6 rounded-lg"
   >
     <div>
       <p class="text-sm text-gray-700">
@@ -59,7 +59,7 @@
             1
           </button>
           <span
-            class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700"
+            class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 cursor-pointer"
             @click="goBackwardSection"
           >
             ...
@@ -83,7 +83,7 @@
         </button>
         <template v-if="section < sections">
           <span
-            class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700"
+            class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 cursor-pointer"
             @click="goForwardSection"
           >
             ...

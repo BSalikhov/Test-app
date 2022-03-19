@@ -69,13 +69,15 @@
                     name: 'post-details',
                     params: { id: post.id },
                   }"
-                  class="block mt-2"
+                  class="block mt-2 group"
                 >
-                  <p class="text-xl font-semibold text-gray-900">
+                  <p
+                    class="text-xl font-semibold text-gray-900 pb-1 border-b-2 border-transparent group-hover:border-b-2 group-hover:border-indigo-600 duration-300"
+                  >
                     {{ post.title }}
                   </p>
 
-                  <p class="mt-3 text-base text-gray-500">
+                  <p class="mt-2 text-base text-gray-500">
                     {{ post.body }}
                   </p>
                 </router-link>
@@ -137,7 +139,16 @@ export default {
   methods: {
     pageChanged(page) {
       this.page = page;
-      this.route.params.query.push;
+      this.$router.push({ query: { page: page } });
+    },
+  },
+
+  watch: {
+    "$route.query.page": {
+      handler() {
+        this.page = this.$route.query.page;
+      },
+      immediate: true,
     },
   },
 };

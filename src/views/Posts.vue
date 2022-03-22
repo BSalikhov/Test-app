@@ -146,7 +146,7 @@ export default {
   watch: {
     "$route.query.page": {
       handler() {
-        this.page = this.$route.query.page;
+        this.page = +this.$route.query.page || 1;
       },
       immediate: true,
     },
